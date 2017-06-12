@@ -1,21 +1,44 @@
-This is a sample Dataface application used in the Getting Started tutorial at 
-http://fas.sfu.ca/dataface/getting-started .  This version contains the state
-of the application at the end of section 8 of the tutorial (Relationships).
+# Faculty of Widgetry 
 
-Installation:
---------------
-	1. Create a new MySQL database and run the commands in install/tables.sql
-	   in that database to create the table structure.
-	2. Alter the index.php file to reflect the correct location of the dataface
-	   installation.
-	3. Modify the conf.ini file with the correct database connection info.
-	
-Help:
-----
+This is a sample Dataface application used in the [Getting Started tutorial](http://xataface.com/documentation/tutorial/getting_started).
 
-This application is not meant to be used.  It is just a learning tool that 
-should be viewed in conjunction with the getting started tutorial on the 
-dataface web site.
+## Installation
 
-If you have questions, please refer to the tutorial or contact Steve Hannah
-at shannah@sfu.ca .
+## Prerequisites
+
+1. A LAMP stack (PHP/MySQL).  If you are working on a desktop computer both [XAMPP](https://www.apachefriends.org/index.html) and [MAMP](https://www.mamp.info/en/) provide double-clickable installers with the full stack.
+2. The [Xataface CLI Tool](https://www.npmjs.com/package/xataface)
+
+The Xataface CLI tool requires that NodeJS be installed.
+
+NOTE:  Though the Xataface CLI tool requires NodeJS, Xataface itself is pure PHP and will run on any
+LAMP stack - and **does NOT require NodeJS**.
+
+**Installing Xataface CLI Tool:**
+
+Mac/Linux:
+
+~~~
+$ sudo npm install -g xataface
+~~~
+
+Windows:
+
+~~~
+> npm install -g xataface
+~~~
+
+## Installing the App Itself
+
+Navigate to a web-accessible directory.  e.g. ` $ cd /path/to/htdocs`.  Then:
+
+~~~
+$ xataface clone https://github.com/shannah/faculty_of_widgetry
+~~~
+
+Follow the prompts.  This will create a directory named "faculty_of_widgetry" in the current directory,
+and it will create a database named "faculty_of_widgetry".
+
+You can access the application by pointing your web browser to the "faculty_of_widgetry" directory that 
+was just created.
+
